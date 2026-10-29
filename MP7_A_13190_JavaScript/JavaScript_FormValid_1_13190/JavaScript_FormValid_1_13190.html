@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>Form pendaftaran ekskul (XHTML)</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+            function fn_Valform() {
+                var sMg = "";
+
+                if (document.getElementById("nama").value == "") {
+                    sMg += "\n* Anda belum mengisikan nama";
+                }
+                if (document.getElementById("kelas").value == "") {
+                    sMg += "\n* Anda belum mengisikan kelas";
+                }
+                if (document.getElementById("alasan").value == "") {
+                    sMg += "\n* Anda belum mengisikan alasan";
+                }
+
+                if (sMg != "") {
+                    alert("Peringatan:\n" + sMg);
+                    return false;
+                } else {
+                    return true;
+                }
+            } 
+    </script>
+</head>
+
+<body>
+    <h1> form pendaftaran ekskul</h1>
+    <form action="#" method="post" onsubmit="return fn_Valform();">
+        <p>nama:<br / ><input type="text" id="nama" name="nama"/></p>
+        <p>kelas:<br / ><input type="text" id="kelas" name="kelas"/></p>
+        <p>Alasan bergabung:
+            <br /><textarea id="alasan" name="alasan" rows="4" cols="30"></textarea></p>
+        <p> <input type="submit" value="send"></p>
+    </form>
+</body>
+
+</html>
